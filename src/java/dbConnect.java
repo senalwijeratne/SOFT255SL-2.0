@@ -23,11 +23,11 @@ public class dbConnect extends HttpServlet {
       public static Connection dbconnect()
     {
         Connection conn = null;
-        String url = "jdbc:sqlserver://emberproj.database.windows.net";
-        String db = "EMBER";
+        String url = "jdbc:mysql://localhost:3306/";
+        String db = "thrusterdb";
         String driver = "com.mysql.jdbc.Driver";
-        String user = "emberadmin";
-        String pass = "Ember@789";
+        String user = "root";
+        String pass = "";
         try{
             Class.forName(driver);
             conn = DriverManager.getConnection(url + db, user, pass);

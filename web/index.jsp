@@ -8,7 +8,7 @@
     </head>
     <body>
        <div class="container">
-          <form class="form-signin" action="loginCheck.java" method="POST">
+          <form class="form-signin" action="loginCheck" method="POST">
             <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
             <h2 class="form-signin-heading">Welcome</h2>
             <label for="inputEmail" class="sr-only">Email</label>

@@ -31,7 +31,7 @@ public class Register extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 
       
-          String email = request.getParameter("email");
+           String email = request.getParameter("email");
            String password = request.getParameter("Password");
           
            encryption enc = new encryption();

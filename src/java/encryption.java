@@ -27,7 +27,7 @@ import javax.servlet.http.HttpServletResponse;
 public class encryption extends HttpServlet {
 
    public String encrypting(String password) throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException {
-        MessageDigest md = MessageDigest.getInstance("MD5");
+     MessageDigest md = MessageDigest.getInstance("MD5");
      md.update(password.getBytes());
      byte[] b = md.digest();
      StringBuffer sb = new StringBuffer();
@@ -36,9 +36,6 @@ public class encryption extends HttpServlet {
      }
      String hash = sb.toString();
 
-        
-        
-    
     return hash;
     }
    

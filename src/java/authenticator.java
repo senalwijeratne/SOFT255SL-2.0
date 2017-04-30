@@ -40,7 +40,7 @@ public class authenticator extends HttpServlet {
                 
                 dbConnect conn = new dbConnect();
                 //checking for the salt for the user//
-                PreparedStatement statementSelectingSaltUser = conn.prepareStatement("SELECT salt FROM user WHERE email = ? ");
+                PreparedStatement statementSelectingSaltUser = conn.prepareStatement("SELECT salt FROM users WHERE email = ? ");
                 statementSelectingSaltUser.setString(1,email);
                 ResultSet resultSalt = statementSelectingSaltUser.executeQuery();
                 //if else to put the salt value to the string//
@@ -48,7 +48,7 @@ public class authenticator extends HttpServlet {
                   String userSalt = resultSalt.getString("salt"); 
                   String fullPass = encryptedPass+userSalt;
                   //checking if the hash plus salt from databas//
-                  PreparedStatement statementCheckingUser = conn.prepareStatement("SELECT * FROM user WHERE email = ? AND hashAndSalt = ?");
+                  PreparedStatement statementCheckingUser = conn.prepareStatement("SELECT * FROM users WHERE email = ? AND hashAndSalt = ?");
                   statementCheckingUser.setString(1,email);
                   statementCheckingUser.setString(2,fullPass);
                   ResultSet resultUser = statementCheckingUser.executeQuery();

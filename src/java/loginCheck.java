@@ -27,7 +27,7 @@ import javax.servlet.http.HttpServletResponse;
 public class loginCheck extends HttpServlet {
 
    protected void doPost(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
+			HttpServletResponse response) throws ServletException, IOException {''
 
        try {
            String email = request.getParameter("email");

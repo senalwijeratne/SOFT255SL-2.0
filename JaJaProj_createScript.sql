@@ -75,6 +75,8 @@ CREATE TABLE User (
     addressLine3 varchar(255) NOT NULL,
     email varchar(255) NOT NULL,
     salt varchar(255) NOT NULL,
+    password varchar(255) NOT NULL,
+    saltedpw varchar(255) NOT NULL,
     dateOfBirth date NOT NULL,
     mobileNo varchar(255) NOT NULL,
     homeNo varchar(255) NOT NULL,
